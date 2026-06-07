@@ -1,1 +1,1 @@
-web: cd .medusa/server && npx medusa start
+web: cd .medusa/server && npx medusa start -H 0.0.0.0
