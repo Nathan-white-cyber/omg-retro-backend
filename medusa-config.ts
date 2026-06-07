@@ -1,6 +1,6 @@
-import { loadEnv, defineConfig } from "@medusajs/utils"
+import { loadEnv, defineConfig } from '@medusajs/utils'
 
-loadEnv(process.env.NODE_ENV || "development", process.cwd())
+loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
   projectConfig: {
@@ -15,11 +15,11 @@ module.exports = defineConfig({
     },
     redisUrl: process.env.REDIS_URL,
     http: {
-      storeCors: process.env.STORE_CORS,
-      adminCors: process.env.ADMIN_CORS,
-      authCors: process.env.STORE_CORS,
-      jwtSecret: process.env.JWT_SECRET,
-      cookieSecret: process.env.COOKIE_SECRET,
+      storeCors: process.env.STORE_CORS || 'https://omg-retro.vercel.app',
+      adminCors: process.env.ADMIN_CORS || 'https://omg-retro.vercel.app',
+      authCors: process.env.STORE_CORS || 'https://omg-retro.vercel.app',
+      jwtSecret: process.env.JWT_SECRET || 'omgretro-jwt-secret-2026-secure',
+      cookieSecret: process.env.COOKIE_SECRET || 'omgretro-cookie-secret-2026-secure',
     },
   },
   admin: {
